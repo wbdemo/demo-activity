@@ -11,7 +11,6 @@
 	<member name="m3" />
 	
 	<loan book="b1" member="m3" />
-	<loan book="b1" member="m3" />
 	<loan book="b2" member="m2" />
 	<loan book="b3" member="m1" />
 	
