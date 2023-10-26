@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: uk.kcl.inf.mdd1.turtles.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: uk.kcl.inf.mdd1.turtles.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: uk.kcl.inf.mdd1.turtles.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: uk.kcl.inf.mdd1.turtles,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: uk.kcl.inf.mdd1.ide.contentassist.antlr.internal,
+ uk.kcl.inf.mdd1.ide.contentassist.antlr

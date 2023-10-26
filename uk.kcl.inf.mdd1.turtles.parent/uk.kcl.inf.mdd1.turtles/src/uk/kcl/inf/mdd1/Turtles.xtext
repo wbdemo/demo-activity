@@ -1,0 +1,28 @@
+grammar uk.kcl.inf.mdd1.Turtles with org.eclipse.xtext.common.Terminals
+
+generate turtles "http://www.kcl.uk/inf/mdd1/Turtles"
+
+TurtleProgram:
+	statements += Statement*
+;
+
+Statement:
+	MoveStatement | 
+	TurnStatement
+;
+
+MoveStatement:
+	command = MoveCommand '(' steps=INT ')'
+;
+
+enum MoveCommand:
+	forward='forward' | backward='backward'
+;
+
+TurnStatement:
+	'turn' direction=TurnCommand 'by' degrees=INT 'degrees'
+;
+
+enum TurnCommand:
+	left | right
+;

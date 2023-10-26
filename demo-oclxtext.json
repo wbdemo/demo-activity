@@ -58,6 +58,83 @@
 
              ]
         
+        },
+
+        {
+            "id": "activity-xtext-turtles",
+            "title": "Xtext Language Workbench",
+            "icon": "xtext",
+            "tools": ["http://127.0.0.1:8074/xtext_tool.json"],
+
+            "layout": {
+                "area": [
+                    ["panel-xtext" ],
+                    ["panel-console" ]
+                ]
+            },
+
+            "actions": [
+                {
+                    "source": "panel-xtext",
+                    "sourceButton": "action-button",
+                    "parameters": {
+                        "languageName": "uk.ac.kcl.inf.mdd1.turtles.Turtles",
+                        "baseName": "uk.ac.kcl.inf.mdd1.turtles",
+                        "extension": "turtles",
+                        "grammar": "panel-xtext" 
+                    },
+                    "output": "panel-console"
+                }
+            
+            ],
+
+            "panels": [
+                {
+                    "id": "panel-xtext",
+                    "name": "Grammar",
+                    "ref": "xtext-grammar",
+                    "file": "uk.kcl.inf.mdd1.turtles.parent/uk.kcl.inf.mdd1.turtles/src/uk/kcl/inf/mdd1/Turtles.xtext",
+                    "editorPanel": "panel-turtles",
+                    "editorActivity": "activity-turtles-editor"
+                },
+                {
+                    "id": "panel-console",
+                    "name": "Console",
+                    "ref": "console"
+                }
+
+
+            ]
+        },
+
+        {
+            "id": "activity-turtles-editor",
+            "title": "Turtles Editor",
+            "icon": "xtext",
+            "tools": [ "http://127.0.0.1:8070/epsilon_tool.json",
+                        "http://127.0.0.1:8074/xtext_tool.json"],
+            "layout": {
+                    "area": [
+                        ["panel-turtles" ],
+                        ["panel-console" ]
+                    ]
+                },
+            "actions": [
+            ],
+            "panels": [
+                {
+                    "id": "panel-turtles",
+                    "name": "Editor",
+                    "ref": "xtext-editor",
+                    "file": "runtime-EclipseApplication/TestTurtles/test.turtles",
+                    "extension": "turtles"
+                },
+                {
+                    "id": "panel-console",
+                    "name": "Console",
+                    "ref": "console"
+                }
+            ]
         }
 
     ]
